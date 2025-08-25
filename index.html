@@ -10,7 +10,23 @@
             font-family: 'Segoe UI', Arial, sans-serif;
             color: #333;
             margin: 0;
+            padding: 20px;
+        }
+
+        body p {
+            margin: 0 0 1em 0;
             padding: 0;
+            line-height: 1.6;
+            font-size: 1.1em;
+            color: #555;
+            text-align: center;
+            white-space: pre-line;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            word-spacing: 1px;
+            text-shadow: 0 1px 1px rgba(0,0,0,0.05);
+            max-width: 90%;
+            
         }
         .container {
             max-width: 600px;
@@ -76,6 +92,16 @@
         .carousel-btn.right {
             right: 8px;
         }
+
+        @media (max-width: 600px) {
+            .container {
+                margin: 30px auto;
+                padding: 20px;
+            }
+            p {
+                font-size: 1.1em;
+            }
+        }
     </style>
 </head>
 <body>
@@ -93,7 +119,7 @@
         </p>
 
         <p>
-            Your eyes <span style="font-size:1.5em;">🤤</span> had a way of drawing me in, making you look elegant and cute.<br>
+            Your eyes <span style="font-size:1.5em;">✨</span> had a way of drawing me in, making you look elegant and cute.<br>
             The way they suit your face, makes you even more irresistible.<br>
         </p>
         <!-- Carousel Start -->
@@ -129,5 +155,6 @@
             showImage(current);
         }
     </script>
+    <p>Made with feelings by Elijah Kalosa.</p>
 </body>
 </html>
