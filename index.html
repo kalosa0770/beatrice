@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beatrice | Chiwaya</title>
+    <style>
+        body {
+            background: #ffe6f2;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 60px auto;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+            padding: 32px;
+            text-align: center;
+        }
+        h1 {
+            color: #d72660;
+            margin-bottom: 16px;
+        }
+        .heart {
+            font-size: 48px;
+            color: #d72660;
+            margin-bottom: 16px;
+        }
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-bottom: 24px;
+        }
+        .smile {
+            font-size: 2em;
+            color: #fbb13c;
+        }
+        /* Carousel styles */
+        .carousel {
+            position: relative;
+            width: 100%;
+            max-width: 400px;
+            margin: 24px auto;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+        }
+        .carousel img {
+            width: 100%;
+            display: none;
+        }
+        .carousel img.active {
+            display: block;
+        }
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #d72660;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 32px;
+            height: 32px;
+            cursor: pointer;
+            font-size: 1.2em;
+            opacity: 0.8;
+        }
+        .carousel-btn.left {
+            left: 8px;
+        }
+        .carousel-btn.right {
+            right: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="heart">❤️</div>
+        <h1>To Beatrice Chiwaya</h1>
+        <p>
+            I just wanted to let you know how much I adored your company on the bus.<br>
+            Every moment felt special, and I couldn't help but notice how your eyes and my eyes kept meeting at fairview the first time and after we reached Chongwe in that hallway we were standing.<br>
+            Those little glances made my heart skip a beat.
+        </p>
+        <p>
+            After you came that night when I was with Orient, then you like smiled with your gapped teeth, that moment felt like I have been sent to heaven and back for a couple of seconds. I have to say your gapped teeth are truly adorable.<br>
+            There is something so unique and beautiful about you.
+        </p>
+
+        <p>
+            Your eyes <span style="font-size:1.5em;">🤤</span> had a way of drawing me in, making you look elegant and cute.<br>
+            The way they suit your face, makes you even more irresistible.<br>
+        </p>
+        <!-- Carousel Start -->
+        <div class="carousel" id="carousel">
+            <button class="carousel-btn left" onclick="prevImage()">&#8592;</button>
+            <img src="./IMG-20250825-WA0006.jpg" class="active" alt="Moment 1">
+            <img src="./IMG-20250825-WA0008.jpg" alt="Moment 2">
+            <img src="./IMG-20250825-WA0019.jpg" alt="Moment 3">
+            <button class="carousel-btn right" onclick="nextImage()">&#8594;</button>
+        </div>
+
+        
+        <!-- Carousel End -->
+        <div class="smile">😊</div>
+        <p>
+            Thank you for being beautiful mweh!<br>
+            I hope we get to share many more moments together.
+        </p>
+    </div>
+    <script>
+        // Simple JS for carousel
+        const images = document.querySelectorAll('.carousel img');
+        let current = 0;
+        function showImage(idx) {
+            images.forEach((img, i) => img.classList.toggle('active', i === idx));
+        }
+        function prevImage() {
+            current = (current - 1 + images.length) % images.length;
+            showImage(current);
+        }
+        function nextImage() {
+            current = (current + 1) % images.length;
+            showImage(current);
+        }
+    </script>
+</body>
+</html>
